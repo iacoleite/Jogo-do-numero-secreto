@@ -1,11 +1,4 @@
-/*
-let titulo = document.querySelector('h1');
-titulo.innerHTML = 'Jogo do número secreto';
 
-let paragrafo = document.querySelector('p');
-paragrafo.innerHTML = 'Escolha um número entre 1 e 10';
-*/
-// let palavraTentativa = '';
 let numerosSorteados = [];
 tentativas = 0;
 numerosTotais = 100;
@@ -20,7 +13,7 @@ function geraNumeroAleatorio() {
         return geraNumeroAleatorio(); 
     } else {
         numerosSorteados.push(numeroEscolhido);
-        console.log(numerosSorteados);
+        // console.log(numerosSorteados);
         return numeroEscolhido;
         
     }  
@@ -54,9 +47,9 @@ resetar();
 
 function verificarChute() {
     tentativas++;
-    console.log(numeroSecreto);
+    // console.log(numeroSecreto);
     chute = parseInt(document.querySelector('input').value);
-    numeroSecreto == chute ? console.log('acertou') : console.log('errou');
+    // numeroSecreto == chute ? console.log('acertou') : console.log('errou');
     //(tentativas == 1) ? palavraTentativa = 'tentativa' : palavraTentativa = 'tentativas';
     let palavraTentativa = (tentativas == 1) ? 'tentativa': 'tentativas';
     if (numeroSecreto == chute) {
@@ -73,95 +66,3 @@ function verificarChute() {
     }
 }
 
-
-/* DESAFIOS
-
-function saudacaoPadrao() {
-    console.log('Olá, mundo!');
-}
-
-function saudacaoNome(nome) {
-    console.log('Olá,' + nome);
-}
-
-function duplica(numeroSimples) {
-    return (numeroSimples * 2);
-}
-
-function media(a, b, c) {
-    return ((a + b + c) / 3);
-}
-
-function maiorNumero(a, b) {
-    return (a > b) ? a : b;
-    }
-
-/*{
-    if (a > b) {
-        return a;
-    } else {
-        return b;
-    }
-}
-
-
-function quadrado(a) { return a * a } 
-
-
-function imc(altura, peso) {
-    indice = peso / (Math.pow(altura, 2));
-    //indice = peso / (altura * altura);
-    return indice;
-}
-
-function fatorial(numero) {
-    if (numero == 0) {
-        return 1
-    } else { 
-    resultado = 1;
-    while (numero > 0) {
-    resultado = resultado * numero;
-    numero--;
-        }
-    return resultado;
-    }
-}
-function converteDolar(dolar) {
-    precoDolar = 4.80;
-    resultado = dolar * precoDolar;
-    return resultado.toFixed(2);
-}
-
-function areaSalaRetangular(x, y) {
-    areaTotal = x * y;
-    perimetroTotal = (2 * x) + (2 * y);
-    console.log(`A área é ${areaTotal} e o perímetro é ${perimetroTotal}`);
-    return areaTotal, perimetroTotal;
-}
-
-function areaRedonda(raio) {
-    pi = 3.14;
-    perimetroSalaRedonda = 2 * raio * pi;
-    areaSalaRedonda = pi * Math.pow(raio, 2);
-    console.log(`A área é ${areaSalaRedonda} e o perímetro é ${perimetroSalaRedonda}`);
-}
-
-function tabuada(numero) {
-    i = 0;
-    while (i <= 10) {
-        resultado = numero * i;
-        console.log(`${numero} X ${i} = ${resultado}`);
-        i++
-    }
-}
-
-
-let listaGenerica = [];
-let linguagensDeProgramacao = ['JavaScript', 'C', 'C++', 'Kotlin', 'Python'];
-linguagensDeProgramacao.push('Java', 'Ruby', 'GoLang');
-
-let listaNomes = ['Caio', 'Iaco', 'Oiac'];
-console.log(listaNomes[0]);
-console.log(listaNomes[1]);
-console.log(listaNomes[2]);
-*/
